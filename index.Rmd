@@ -1,0 +1,48 @@
+---
+title: "introduction + summary"
+author: "Yizhou Ding"
+date: '2022-08-15'
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+source("analysis.R")
+```
+
+##Introduction
+
+In this project, I will focus on Washington State incarceration data related to population and race. By using the data from Vera Institute of Justice, I choose to focus on the Asian American Population, Black Population, total population, total jail population in Washington State, because I go to university in UW. 
+
+##Summary
+In the most recent year, the county where hold the most population in prison is King Country.
+
+The percentage of female in US jail is `r country_jail_female_ratio`. The percentage of male in US jail is `r country_jail_male_ratio`. The percentage of African American population in US jail is `r country_jail_black_ratio`  The percentage of white population in US jail is `r country_jail_white_ratio` while Washington states has `r country_jail_female_ratio` of female in jail and `r country_jail_male_ratio` male in jail. And the percentage of African American in jail is `r WA_jail_black_ratio` , white American is `r WA_jail_female_ratio`. 
+
+Something that surprised me is that despite all the anti-racist, anti-sexist activism that has been going on, this phenomenon still exists.
+
+##Chart 1: Scatter Plot
+
+The scatter plot shows the trend of female and male in jail from 1990 to 2018. There are more male than female in jail in the past years. For female the uptrend is very gentle, but for male, in the year between 2005 to 2010, the slop is very steep and population increase quickly and reach at the top. And as you can see from the graph, the crime rate is increasing with each year.
+
+```{r}
+scatter_plot
+```
+
+##Chart 2: Pie Chart
+
+The pie chart shows the percentage of each region in jail.  We can see that the number of people in the South accounts for a large percentage of crime in the country as a whole. The midwest is the least.
+
+```{r}
+pie
+```
+
+##Chart 3: Map 
+
+The map shows the female population in jail in WA. According to the map, a great portion of the female population in jail lies in the King county, the second portion lies in Yakima and the third lies in Spokane. I think the reason king country has the highest crime rate is because it is the area with the highest crime rate in Washington State, and secondly, it has the highest population movement in the area, so it leads to the highest crime rate.
+
+```{r}
+map
+```
+
